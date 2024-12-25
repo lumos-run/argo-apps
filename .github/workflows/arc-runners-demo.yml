@@ -1,10 +1,10 @@
-name: ARC Runner Set Demo
+name: ARC Runners Demo
 
 on:
   workflow_dispatch:
 
 jobs:
-  arc-runner-set-demo:
-    runs-on: arc-runner-set
+  arc-runners-demo:
+    runs-on: arc-runners
     steps:
       - run: echo "🎉 This job uses runner scale set runners!"

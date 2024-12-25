@@ -1,11 +1,11 @@
-name: ARC Runner Set Long Running
+name: ARC Runners Long Running
 
 on:
   workflow_dispatch:
 
 jobs:
   long-running-job:
-    runs-on: arc-runner-set
+    runs-on: arc-runners
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
