@@ -1,0 +1,11 @@
+# Argo destination server
+destinationServer: https://kubernetes.default.svc
+# ARC version
+runnerScaleSetControllerVersion: 0.10.1
+runnerScaleSetVersion: 0.10.1
+# githubConfigUrl is the URL of the GitHub organization/repository to deploy runners to
+githubConfigUrl: https://github.com/lumos-run
+# GitHub App for runner permissions
+githubAppId: "1095109"
+githubAppInstallationId: "58746688"
+githubConfigSecret: pre-defined-secret
