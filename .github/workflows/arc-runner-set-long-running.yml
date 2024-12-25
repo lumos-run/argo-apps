@@ -1,0 +1,20 @@
+name: ARC Runner Set Long Running
+
+on:
+  workflow_dispatch:
+
+jobs:
+  long-running-job:
+    runs-on: arc-runner-set
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Simulate long-running task
+        run: |
+          echo "Starting long-running task..."
+          for i in {1..10}; do
+            echo "Minute $i of 10..."
+            sleep 60
+          done
+          echo "Task completed!"
