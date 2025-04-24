@@ -3,7 +3,7 @@ kind: Service
 metadata:
   annotations:
     tailscale.com/expose: "true"
-    tailscale.com/host: "hello-world"
+    tailscale.com/hostname: "hello-world"
   name: hello-world
   labels:
     app: hello-world
