@@ -1,13 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cluster-access
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: cluster-access-readonly
+  namespace: cluster-access
 ---
 apiVersion: v1
 kind: Secret
 metadata:
   name: cluster-access-readonly-token
+  namespace: cluster-access
   annotations:
     kubernetes.io/service-account.name: cluster-access-readonly
 type: kubernetes.io/service-account-token
@@ -28,7 +34,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: cluster-access-readonly
-  namespace: default
+  namespace: cluster-access
 roleRef:
   kind: ClusterRole
   name: cluster-access-readonly
